@@ -24,9 +24,12 @@ jobs:
           pip install -r requirements.txt
 
       - name: Set up environment variables from GitHub secrets
-        run: echo "VIRUSTOTAL_API_KEY=${{ secrets.VIRUSTOTAL_API_KEY }}" >> $GITHUB_ENV
+        run: |
+          echo "VIRUSTOTAL_API_KEY=${{ secrets.VIRUSTOTAL_API_KEY }}" >> $GITHUB_ENV
+          echo "ALIENVAULT_API_KEY=${{ secrets.ALIENVAULT_API_KEY }}" >> $GITHUB_ENV
         env:
           VIRUSTOTAL_API_KEY: ${{ secrets.VIRUSTOTAL_API_KEY }}
+          ALIENVAULT_API_KEY: ${{ secrets.ALIENVAULT_API_KEY }}
 
       - name: Run tests
         run: |
