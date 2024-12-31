@@ -8,3 +8,6 @@ The Open Source Vulnerabilities (OSV) database is a platform designed to provide
 
 2. VirusTotal:
 VirusTotal is a popular service used for analyzing files, URLs, domains, and IP addresses to detect malware, suspicious activities, and malicious content. It is widely used by cybersecurity professionals, developers, and organizations for threat intelligence and analysis.
+
+# How to Use
+'npm start'
