@@ -10,10 +10,13 @@ def fetch_osv_vulnerabilities(package_name, ecosystem):
             "ecosystem": ecosystem
         }
     }
+    print(f"Sending payload to OSV API: {payload}")
     try:
         response = requests.post(OSV_API_URL, json=payload)
         response.raise_for_status()
-        return response.json()
+        result = response.json()
+        print(f"OSV API returned: {result}")
+        return result
     except requests.exceptions.RequestException as e:
         print(f"Error fetching vulnerabilities: {e}")
         return None

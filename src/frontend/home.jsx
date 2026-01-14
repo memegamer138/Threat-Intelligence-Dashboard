@@ -9,8 +9,9 @@ const Home = () => {
     <div className="container">
       <nav className="navbar">
         <button onClick={() => navigate('/')}>Home</button>
-        <button onClick={() => navigate('/osv')}>Fetch OSV</button>
-        {/* Add more buttons for other features here */}
+        <button onClick={() => navigate('/osv')}>Google OSV</button>
+        <button onClick={() => navigate('/virustotal')}>VirusTotal</button>
+        <button onClick={() => navigate('/alienvault')}>AlienVault OTX</button>
       </nav>
       <div className="content">
         <h1>Threat Intelligence Dashboard</h1>
@@ -28,6 +29,10 @@ const Home = () => {
         </ul>
         <h2>How to Use</h2>
         <p>Run the following command to start the application:</p>
+        <p>In terminal 1:</p>
+        <code>python src/main/app.py</code>
+        <p>In terminal 2:</p>
+        <code>npm install</code>
         <code>npm start</code>
       </div>
     </div>
